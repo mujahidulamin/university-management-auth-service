@@ -1,0 +1,25 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "D:\\Next Level Journey\\Mission - 3\\university-management-auth-service\\logs\\winston\\successes\\.fe8b809ba15162e2fa975300f94f33fae958b0f7-audit.json",
+    "files": [
+        {
+            "date": 1686822356239,
+            "name": "D:\\Next Level Journey\\Mission - 3\\university-management-auth-service\\logs\\winston\\successes\\phu-2023-15-06-15-success.log",
+            "hash": "e1d3f500496b72942c3e182ebdffef235a78e5b4c01dd22d5341059295056af6"
+        },
+        {
+            "date": 1686826574015,
+            "name": "D:\\Next Level Journey\\Mission - 3\\university-management-auth-service\\logs\\winston\\successes\\phu-2023-15-06-16-success.log",
+            "hash": "51806aaae875ca0fc42c99bf2e02d757be5dd0381d96e92bd6e96538d6f0ac6a"
+        },
+        {
+            "date": 1686831330150,
+            "name": "D:\\Next Level Journey\\Mission - 3\\university-management-auth-service\\logs\\winston\\successes\\phu-2023-15-06-18-success.log",
+            "hash": "561cd3819b3435e5b4ef14a65168e5e4a4fff0c1bfdfed01b8c43ea730e122a9"
+        }
+    ],
+    "hashType": "sha256"
+}
