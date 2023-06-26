@@ -31,7 +31,7 @@ const getAllSemesters = async (
   filters: IAcademicSemesterFilters,
   paginationOptions: IPaginationOptions
 ): Promise<IGenericResponse<IAcademicSemester[]>> => {
-  const { searchTerm } = filters;
+  const { searchTerm, ...filtersData } = filters;
 
   const andConditions = [];
 
@@ -42,6 +42,14 @@ const getAllSemesters = async (
           $regex: searchTerm,
           $options: 'i',
         },
+      })),
+    });
+  }
+
+  if (Object.keys(filtersData).length) {
+    andConditions.push({
+      $and: Object.entries(filtersData).map(([field, value]) => ({
+        [field]: value,
       })),
     });
   }
@@ -80,7 +88,10 @@ const getAllSemesters = async (
     sortConditions[sortBy] = sortOrder;
   }
 
-  const result = await AcademicSemester.find({ $and: andConditions })
+  const whereConditions =
+    andConditions.length > 0 ? { $and: andConditions } : {};
+
+  const result = await AcademicSemester.find(whereConditions)
     .sort(sortConditions)
     .skip(skip)
     .limit(limit);
@@ -97,7 +108,42 @@ const getAllSemesters = async (
   };
 };
 
+const getSingleSemester = async (
+  id: string
+): Promise<IAcademicSemester | null> => {
+  const result = await AcademicSemester.findById(id);
+  return result;
+};
+
+const updateSemester = async (
+  id: string,
+  payload: Partial<IAcademicSemester>
+): Promise<IAcademicSemester | null> => {
+  if (
+    payload.title &&
+    payload.code &&
+    academicSemesterTitleCodeMapper[payload.title] !== payload.code
+  ) {
+    throw new ApiError(httpStatus.BAD_REQUEST, 'Invalid Semester Code');
+  }
+
+  const result = await AcademicSemester.findOneAndUpdate({ _id: id }, payload, {
+    new: true,
+  });
+  return result;
+};
+
+const deleteSemester = async (
+  id: string
+): Promise<IAcademicSemester | null> => {
+  const result = await AcademicSemester.findByIdAndDelete(id);
+  return result;
+};
+
 export const AcademicSemesterService = {
   createSemester,
   getAllSemesters,
+  getSingleSemester,
+  updateSemester,
+  deleteSemester,
 };
