@@ -1,0 +1,9 @@
+Wed Sep 20 2023 15:26:25 } [PH] error: Failed to connect database initAcademicDepartmentEvents is not defined
+Wed Sep 20 2023 15:28:37 } [PH] error: Failed to connect database initAcademicDepartmentEvents is not defined
+Wed Sep 20 2023 15:39:20 } [PH] error: AcademicDepartment validation failed: academicFaculty: Path `academicFaculty` is required.
+Wed Sep 20 2023 15:42:49 } [PH] error: AcademicDepartment validation failed: academicFaculty: Path `academicFaculty` is required.
+Wed Sep 20 2023 15:43:52 } [PH] error: AcademicDepartment validation failed: academicFaculty: Path `academicFaculty` is required.
+Wed Sep 20 2023 15:45:23 } [PH] error: AcademicDepartment validation failed: academicFaculty: Path `academicFaculty` is required.
+Wed Sep 20 2023 15:45:34 } [PH] error: AcademicDepartment validation failed: academicFaculty: Path `academicFaculty` is required.
+Wed Sep 20 2023 15:49:6 } [PH] error: AcademicDepartment validation failed: academicFaculty: Path `academicFaculty` is required.
+Wed Sep 20 2023 15:49:56 } [PH] error: AcademicDepartment validation failed: academicFaculty: Path `academicFaculty` is required.

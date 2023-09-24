@@ -1,0 +1,5 @@
+Thu Sep 21 2023 0:0:29 } [PH] error: E11000 duplicate key error collection: university-management.academicdepartments index: title_1 dup key: { title: "CSE" }
+Thu Sep 21 2023 0:6:43 } [PH] error: E11000 duplicate key error collection: university-management.academicfaculties index: title_1 dup key: { title: "Zihadul Amin" }
+Thu Sep 21 2023 0:20:33 } [PH] error: Failed to connect database EVENT_ACADEMIC_DEPARTMENT_UPDATED is not defined
+Thu Sep 21 2023 0:23:56 } [PH] error: E11000 duplicate key error collection: university-management.academicfaculties index: title_1 dup key: { title: "Anima Talukder" }
+Thu Sep 21 2023 0:40:15 } [PH] error: E11000 duplicate key error collection: university-management.academicdepartments index: title_1 dup key: { title: "Bangladesh Study" }

@@ -1,0 +1,26 @@
+Wed Sep 20 2023 17:1:43 } [PH] error: E11000 duplicate key error collection: university-management.academicfaculties index: title_1 dup key: { title: "Sakib al Hasan" }
+Wed Sep 20 2023 17:3:10 } [PH] error: Failed to connect database EVENT_ACADEMIC_FACULTY_UPDATED is not defined
+Wed Sep 20 2023 17:3:29 } [PH] error: Failed to connect database EVENT_ACADEMIC_FACULTY_UPDATED is not defined
+Wed Sep 20 2023 17:3:32 } [PH] error: Failed to connect database EVENT_ACADEMIC_FACULTY_UPDATED is not defined
+Wed Sep 20 2023 17:3:33 } [PH] error: Failed to connect database EVENT_ACADEMIC_FACULTY_UPDATED is not defined
+Wed Sep 20 2023 17:3:37 } [PH] error: Failed to connect database EVENT_ACADEMIC_FACULTY_UPDATED is not defined
+Wed Sep 20 2023 17:3:43 } [PH] error: Failed to connect database EVENT_ACADEMIC_FACULTY_UPDATED is not defined
+Wed Sep 20 2023 17:3:45 } [PH] error: Failed to connect database EVENT_ACADEMIC_FACULTY_UPDATED is not defined
+Wed Sep 20 2023 17:3:49 } [PH] error: Failed to connect database EVENT_ACADEMIC_FACULTY_UPDATED is not defined
+Wed Sep 20 2023 17:3:56 } [PH] error: Failed to connect database EVENT_ACADEMIC_FACULTY_UPDATED is not defined
+Wed Sep 20 2023 17:3:58 } [PH] error: Failed to connect database EVENT_ACADEMIC_FACULTY_DELETED is not defined
+Wed Sep 20 2023 17:4:7 } [PH] error: Failed to connect database EVENT_ACADEMIC_FACULTY_DELETED is not defined
+Wed Sep 20 2023 17:4:13 } [PH] error: Failed to connect database EVENT_ACADEMIC_FACULTY_DELETED is not defined
+Wed Sep 20 2023 17:4:16 } [PH] error: Failed to connect database EVENT_ACADEMIC_FACULTY_DELETED is not defined
+Wed Sep 20 2023 17:4:42 } [PH] error: Failed to connect database EVENT_ACADEMIC_FACULTY_CREATED is not defined
+Wed Sep 20 2023 17:4:47 } [PH] error: Failed to connect database EVENT_ACADEMIC_FACULTY_CREATED is not defined
+Wed Sep 20 2023 17:4:49 } [PH] error: Failed to connect database EVENT_ACADEMIC_FACULTY_CREATED is not defined
+Wed Sep 20 2023 17:4:52 } [PH] error: Failed to connect database EVENT_ACADEMIC_FACULTY_CREATED is not defined
+Wed Sep 20 2023 17:4:55 } [PH] error: Failed to connect database EVENT_ACADEMIC_FACULTY_CREATED is not defined
+Wed Sep 20 2023 17:4:57 } [PH] error: Failed to connect database EVENT_ACADEMIC_FACULTY_UPDATED is not defined
+Wed Sep 20 2023 17:5:0 } [PH] error: Failed to connect database EVENT_ACADEMIC_FACULTY_DELETED is not defined
+Wed Sep 20 2023 17:5:3 } [PH] error: Failed to connect database EVENT_ACADEMIC_FACULTY_DELETED is not defined
+Wed Sep 20 2023 17:5:7 } [PH] error: Failed to connect database EVENT_ACADEMIC_FACULTY_DELETED is not defined
+Wed Sep 20 2023 17:5:25 } [PH] error: E11000 duplicate key error collection: university-management.academicfaculties index: title_1 dup key: { title: "Abdul halim" }
+Wed Sep 20 2023 17:8:16 } [PH] error: E11000 duplicate key error collection: university-management.academicdepartments index: title_1 dup key: { title: "CSE" }
+Wed Sep 20 2023 17:9:9 } [PH] error: E11000 duplicate key error collection: university-management.academicdepartments index: title_1 dup key: { title: "CSE" }

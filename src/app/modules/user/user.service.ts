@@ -17,6 +17,8 @@ import { IFaculty } from '../faculty/faculty.interface';
 import { Faculty } from '../faculty/faculty.model';
 import { Admin } from '../admin/admin.model';
 import { IAdmin } from '../admin/admin.interface';
+import { RedisClient } from '../../../shared/redis';
+import { EVENT_FACULTY_CREATED, EVENT_STUDENT_CREATED } from './user.constant';
 
 const createStudent = async (
   student: IStudent,
@@ -87,6 +89,13 @@ const createStudent = async (
     });
   }
 
+  if (newUserAllData) {
+    await RedisClient.publish(
+      EVENT_STUDENT_CREATED,
+      JSON.stringify(newUserAllData.student)
+    );
+  }
+
   return newUserAllData;
 };
 
@@ -98,6 +107,7 @@ const createFaculty = async (
   if (!user.password) {
     user.password = config.default_faculty_pass as string;
   }
+
   // set role
   user.role = 'faculty';
 
@@ -148,6 +158,13 @@ const createFaculty = async (
     });
   }
 
+  if (newUserAllData) {
+    await RedisClient.publish(
+      EVENT_FACULTY_CREATED,
+      JSON.stringify(newUserAllData.faculty)
+    );
+  }
+
   return newUserAllData;
 };
 
@@ -159,6 +176,7 @@ const createAdmin = async (
   if (!user.password) {
     user.password = config.default_admin_pass as string;
   }
+
   // set role
   user.role = 'admin';
 

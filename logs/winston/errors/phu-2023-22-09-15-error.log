@@ -1,0 +1,1 @@
+Fri Sep 22 2023 15:40:0 } [PH] error: Plan executor error during findAndModify :: caused by :: E11000 duplicate key error collection: university-management.academicfaculties index: title_1 dup key: { title: "Ayman Sadiq" }
