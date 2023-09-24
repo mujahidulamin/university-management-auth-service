@@ -7,10 +7,14 @@ import { IPaginationOptions } from '../../../interfaces/pagination';
 
 import httpStatus from 'http-status';
 import ApiError from '../../../errors/ApiError';
-import { facultySearchableFields } from './faculty.constant';
+import {
+  EVENT_FACULTY_UPDATED,
+  facultySearchableFields,
+} from './faculty.constant';
 import { IFaculty, IFacultyFilters } from './faculty.interface';
 import { Faculty } from './faculty.model';
 import { User } from '../user/users.model';
+import { RedisClient } from '../../../shared/redis';
 
 const getAllFaculties = async (
   filters: IFacultyFilters,
@@ -97,7 +101,14 @@ const updateFaculty = async (
 
   const result = await Faculty.findOneAndUpdate({ id }, updatedFacultyData, {
     new: true,
-  });
+  })
+    .populate('academicFaculty')
+    .populate('academicDepartment');
+
+  if (result) {
+    await RedisClient.publish(EVENT_FACULTY_UPDATED, JSON.stringify(result));
+  }
+
   return result;
 };
 

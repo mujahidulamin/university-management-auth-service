@@ -1,0 +1,1 @@
+Wed Sep 20 2023 23:47:28 } [PH] error: E11000 duplicate key error collection: university-management.academicdepartments index: title_1 dup key: { title: "CSE" }

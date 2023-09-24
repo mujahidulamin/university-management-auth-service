@@ -11,7 +11,7 @@ const loginUser = catchAsync(async (req: Request, res: Response) => {
   const result = await AuthService.loginUser(loginData);
 
   //set refresh token into cookie
-  const { refreshToken, ...rest } = result;
+  const { refreshToken } = result;
 
   const cookieOptions = {
     secure: config.env === 'production',
@@ -23,7 +23,7 @@ const loginUser = catchAsync(async (req: Request, res: Response) => {
     statusCode: httpStatus.OK,
     success: true,
     message: 'User logged in successfully',
-    data: rest,
+    data: result,
   });
 });
 
